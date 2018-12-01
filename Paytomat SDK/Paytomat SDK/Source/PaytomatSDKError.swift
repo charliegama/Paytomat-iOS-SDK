@@ -26,6 +26,8 @@ public extension PaytomatSDK {
         case notEnoughBalance
         /// Unable to parse model
         case parse
+        /// Currency was disabled by user and user cancelled prompt to enable it
+        case currencyDisabled
         /// Undetailed error has occured
         case unknown
     }
@@ -39,6 +41,8 @@ public extension PaytomatSDK {
         case offline
         /// Unable to parse model
         case parse
+        /// Currency was disabled by user and user cancelled prompt to enable it
+        case currencyDisabled
         /// Undetailed error has occured
         case unknown
     }
@@ -51,6 +55,7 @@ public extension PaytomatSDK {
         case invalidAmount = 4
         case invalidRecipientAccount = 5
         case notEnoughBalance = 6
+        case currencyDisabled = 7
         case general = 2147483647 // 2^32 / 2 - 1
         
         init(_ string: String) {
@@ -73,6 +78,8 @@ public extension PaytomatSDK {
                 return .offline
             case .noEosAccount:
                 return .noAccountExists
+            case .currencyDisabled:
+                return .currencyDisabled
             case .invalidSymbol,
                  .invalidAmount,
                  .invalidRecipientAccount,
@@ -98,6 +105,8 @@ public extension PaytomatSDK {
                 return .invalidAmount
             case .invalidRecipientAccount:
                 return .invalidRecipientAccount
+            case .currencyDisabled:
+                return .currencyDisabled
             case .general:
                 return .unknown
             }
