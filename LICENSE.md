@@ -1,4 +1,4 @@
-Copyright (c) 2011-2016 Baltic International Group OU (git clone https://melnichukal2@bitbucket.org/noisyminer/paytomat-sdk.git)
+Copyright (c) 2011-2016 Baltic International Group OU (git clone https://github.com/paytomat/Paytomat-iOS-SDK.git)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
